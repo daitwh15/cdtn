@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1005</width>
+    <width>1006</width>
     <height>920</height>
    </rect>
   </property>
@@ -16,10 +16,22 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>1440</width>
+    <height>920</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="maximumSize">
+    <size>
+     <width>1440</width>
+     <height>10000</height>
+    </size>
+   </property>
    <property name="font">
     <font>
      <family>Inter</family>
@@ -88,7 +100,7 @@ text-align: left;
      <number>0</number>
     </property>
     <property name="rightMargin">
-     <number>60</number>
+     <number>0</number>
     </property>
     <property name="bottomMargin">
      <number>0</number>
@@ -104,7 +116,7 @@ text-align: left;
       <property name="maximumSize">
        <size>
         <width>250</width>
-        <height>16777215</height>
+        <height>10000</height>
        </size>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_35">
@@ -294,17 +306,100 @@ text-align: left;
                </layout>
               </widget>
              </item>
+             <item>
+              <widget class="QFrame" name="frame_25">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>190</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                </font>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_39">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item alignment="Qt::AlignRight">
+                 <widget class="QLabel" name="label_36">
+                  <property name="maximumSize">
+                   <size>
+                    <width>190</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Inter</family>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Tạo danh sách đầu tiên</string>
+                  </property>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignRight">
+                 <widget class="QPushButton" name="pushButton_11">
+                  <property name="maximumSize">
+                   <size>
+                    <width>190</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Inter</family>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">#pushButton_11{
+background-color: #fff;
+padding: 10px 5px;
+text-align: left;
+border-radius: 15px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Tạo danh sách phát</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
             </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QFrame" name="frame_14">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
            </widget>
           </item>
          </layout>
@@ -318,7 +413,7 @@ text-align: left;
       <property name="maximumSize">
        <size>
         <width>1220</width>
-        <height>920</height>
+        <height>10000</height>
        </size>
       </property>
       <property name="font">
@@ -603,6 +698,12 @@ text-align: left;
            </item>
            <item>
             <widget class="QWidget" name="cardframe" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>220</height>
+              </size>
+             </property>
              <property name="font">
               <font>
                <family>Inter</family>
@@ -611,6 +712,12 @@ text-align: left;
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
                <widget class="QFrame" name="card_1">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -707,6 +814,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -803,6 +916,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_3">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -899,6 +1018,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_4">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -995,6 +1120,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_5">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1111,6 +1242,12 @@ text-align: left;
            </item>
            <item>
             <widget class="QWidget" name="cardframe_2" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>220</height>
+              </size>
+             </property>
              <property name="font">
               <font>
                <family>Inter</family>
@@ -1119,6 +1256,12 @@ text-align: left;
              <layout class="QHBoxLayout" name="horizontalLayout_7">
               <item>
                <widget class="QFrame" name="card_6">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1215,6 +1358,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_7">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1311,6 +1460,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_8">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1407,6 +1562,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_9">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1503,6 +1664,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_10">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1619,6 +1786,12 @@ text-align: left;
            </item>
            <item>
             <widget class="QWidget" name="cardframe_3" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>220</height>
+              </size>
+             </property>
              <property name="font">
               <font>
                <family>Inter</family>
@@ -1627,6 +1800,12 @@ text-align: left;
              <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
                <widget class="QFrame" name="card_11">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1723,6 +1902,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_12">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1819,6 +2004,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_13">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1915,6 +2106,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_14">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -2011,6 +2208,12 @@ text-align: left;
               </item>
               <item>
                <widget class="QFrame" name="card_15">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>200</height>
+                 </size>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -2112,11 +2315,367 @@ text-align: left;
          </item>
          <item>
           <widget class="QWidget" name="playmusic" native="true">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>78</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <family>Inter</family>
             </font>
            </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QFrame" name="frame_21">
+              <property name="maximumSize">
+               <size>
+                <width>180</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_33">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap>resources.qrc/itunes.svg</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_24">
+                 <property name="maximumSize">
+                  <size>
+                   <width>140</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_38">
+                  <item>
+                   <widget class="QLabel" name="label_35">
+                    <property name="maximumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Inter</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Tên bài hát</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_34">
+                    <property name="maximumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Inter</family>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Tên ca sĩ</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_22">
+              <property name="maximumSize">
+               <size>
+                <width>600</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QFrame" name="frame_14">
+               <property name="geometry">
+                <rect>
+                 <x>200</x>
+                 <y>0</y>
+                 <width>121</width>
+                 <height>44</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>200</width>
+                 <height>200</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>32</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>32</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>resources.qrc/left.svg</normaloff>resources.qrc/left.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>28</width>
+                    <height>44</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>38</width>
+                    <height>44</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>resources.qrc/play.svg</normaloff>
+                    <normalon>resources.qrc/play-button.svg</normalon>resources.qrc/play.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>28</width>
+                    <height>28</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QPushButton" name="pushButton_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>32</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>32</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <kerning>false</kerning>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>resources.qrc/arrow-right.svg</normaloff>resources.qrc/arrow-right.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QProgressBar" name="progressBar">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>50</y>
+                 <width>521</width>
+                 <height>3</height>
+                </rect>
+               </property>
+               <property name="value">
+                <number>24</number>
+               </property>
+              </widget>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_23">
+              <property name="maximumSize">
+               <size>
+                <width>148</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <item>
+                <widget class="QPushButton" name="pushButton_7">
+                 <property name="maximumSize">
+                  <size>
+                   <width>32</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>resources.qrc/high-volume.svg</normaloff>resources.qrc/high-volume.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QProgressBar" name="progressBar_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>3</height>
+                  </size>
+                 </property>
+                 <property name="value">
+                  <number>24</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
