@@ -235,7 +235,7 @@ text-align: left;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>cdtn/resources.qrc/home.svg</normaloff>cdtn/resources.qrc/home.svg</iconset>
+                    <normaloff>resources.qrc/home.svg</normaloff>resources.qrc/home.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -258,7 +258,7 @@ text-align: left;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>cdtn/resources.qrc/search.svg</normaloff>cdtn/resources.qrc/search.svg</iconset>
+                    <normaloff>resources.qrc/search.svg</normaloff>resources.qrc/search.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -281,7 +281,7 @@ text-align: left;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>cdtn/resources.qrc/playlist.svg</normaloff>cdtn/resources.qrc/playlist.svg</iconset>
+                    <normaloff>resources.qrc/playlist.svg</normaloff>resources.qrc/playlist.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -480,7 +480,7 @@ text-align: left;
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>cdtn/resources.qrc/search.svg</pixmap>
+                     <pixmap>resources.qrc/search.svg</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -564,7 +564,7 @@ text-align: left;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>cdtn/resources.qrc/user.svg</normaloff>cdtn/resources.qrc/user.svg</iconset>
+                   <normaloff>resources.qrc/user.svg</normaloff>resources.qrc/user.svg</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -637,7 +637,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -733,7 +733,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -829,7 +829,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -925,7 +925,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1021,7 +1021,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1145,7 +1145,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1241,7 +1241,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1337,7 +1337,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1433,7 +1433,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1529,7 +1529,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1653,7 +1653,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1749,7 +1749,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1845,7 +1845,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1941,7 +1941,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -2037,7 +2037,7 @@ text-align: left;
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>cdtn/resources.qrc/itunes.svg</pixmap>
+                      <pixmap>resources.qrc/itunes.svg</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
