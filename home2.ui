@@ -315,6 +315,12 @@ text-align: left;
     </item>
     <item>
      <widget class="QWidget" name="mainbody" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>1220</width>
+        <height>920</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <family>Inter</family>
