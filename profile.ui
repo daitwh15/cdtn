@@ -771,18 +771,24 @@ background-color: #fff;
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>80</number>
+         </property>
          <item>
           <widget class="QLabel" name="theloai">
            <property name="minimumSize">
             <size>
              <width>1200</width>
-             <height>60</height>
+             <height>40</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>1240</width>
-             <height>60</height>
+             <height>40</height>
             </size>
            </property>
            <property name="font">
@@ -1031,6 +1037,9 @@ border-radius: 10px;</string>
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_32">
+         <property name="bottomMargin">
+          <number>20</number>
+         </property>
          <item>
           <widget class="QLabel" name="theloai_2">
            <property name="maximumSize">
@@ -1179,7 +1188,7 @@ border-radius: 10px;</string>
          </item>
         </layout>
        </item>
-       <item alignment="Qt::AlignBottom">
+       <item>
         <widget class="QWidget" name="playmusic" native="true">
          <property name="maximumSize">
           <size>
