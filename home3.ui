@@ -794,6 +794,8 @@ background-color: #fff;
               <font>
                <family>Inter</family>
                <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
@@ -1338,6 +1340,8 @@ background-color: #fff;
               <font>
                <family>Inter</family>
                <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
@@ -1882,6 +1886,8 @@ background-color: #fff;
               <font>
                <family>Inter</family>
                <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
