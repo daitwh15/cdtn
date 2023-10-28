@@ -95,7 +95,7 @@ border-radius: 20px;
 background-color: #fefeff;
 border-radius: 20px;
 }
-#pushButton_4{
+#pushButton_5{
 background-color: #fefeff;
 padding: 10px 5px;
 text-align: left;
@@ -289,29 +289,6 @@ text-align: left;
                   <property name="icon">
                    <iconset>
                     <normaloff>resources.qrc/search.svg</normaloff>resources.qrc/search.svg</iconset>
-                  </property>
-                  <property name="iconSize">
-                   <size>
-                    <width>24</width>
-                    <height>24</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_6">
-                  <property name="font">
-                   <font>
-                    <family>Inter</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Thư viện</string>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>resources.qrc/playlist.svg</normaloff>resources.qrc/playlist.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -896,6 +873,9 @@ background-color: #fff;
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <property name="bottomMargin">
+          <number>74</number>
+         </property>
          <item>
           <widget class="QWidget" name="cardframe_2" native="true">
            <property name="maximumSize">
@@ -915,6 +895,9 @@ background-color: #fff;
            <layout class="QVBoxLayout" name="verticalLayout_8">
             <property name="leftMargin">
              <number>60</number>
+            </property>
+            <property name="bottomMargin">
+             <number>9</number>
             </property>
             <item>
              <widget class="QLabel" name="theloai_2">
@@ -993,13 +976,13 @@ background-color: #fff;
            <property name="minimumSize">
             <size>
              <width>600</width>
-             <height>0</height>
+             <height>264</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>600</width>
-             <height>600</height>
+             <height>264</height>
             </size>
            </property>
            <property name="frameShape">
@@ -1013,10 +996,10 @@ background-color: #fff;
              <number>9</number>
             </property>
             <property name="topMargin">
-             <number>40</number>
+             <number>9</number>
             </property>
             <property name="bottomMargin">
-             <number>40</number>
+             <number>14</number>
             </property>
             <item>
              <widget class="QLabel" name="label_5">
