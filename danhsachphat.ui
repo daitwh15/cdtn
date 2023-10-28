@@ -57,12 +57,11 @@ background-color: transparent;
 border-radius: 10px;
 border: 2px solid #2596be;
 }
-
 #card_6{
 background-color: #fefeff;
 border-radius: 20px;
 }
-#pushButton_4{
+#frame_25{
 background-color: #fefeff;
 padding: 10px 5px;
 text-align: left;
@@ -268,29 +267,6 @@ text-align: center;
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_6">
-                  <property name="font">
-                   <font>
-                    <family>Inter</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Thư viện</string>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>resources.qrc/playlist.svg</normaloff>resources.qrc/playlist.svg</iconset>
-                  </property>
-                  <property name="iconSize">
-                   <size>
-                    <width>24</width>
-                    <height>24</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -305,7 +281,7 @@ text-align: center;
                <property name="maximumSize">
                 <size>
                  <width>210</width>
-                 <height>122</height>
+                 <height>140</height>
                 </size>
                </property>
                <property name="font">
@@ -387,6 +363,18 @@ text-align: center;
                 </item>
                 <item>
                  <widget class="QFrame" name="frame_26">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>60</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>60</height>
+                   </size>
+                  </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -482,7 +470,7 @@ background-color: #fff;
         <bold>true</bold>
        </font>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
+      <layout class="QVBoxLayout" name="verticalLayout_16">
        <item>
         <widget class="QWidget" name="headerframe_2" native="true">
          <property name="sizePolicy">
@@ -626,159 +614,42 @@ background-color: #fff;
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="headerframe" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>364</width>
-           <height>200</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Inter</family>
-          </font>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_6">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="minimumSize">
-               <size>
-                <width>120</width>
-                <height>120</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>120</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Inter</family>
-               </font>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="pixmap">
-               <pixmap>resources.qrc/ellipse.svg</pixmap>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QFrame" name="frame_5">
-              <property name="minimumSize">
-               <size>
-                <width>200</width>
-                <height>120</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>200</width>
-                <height>120</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_4">
-               <property name="spacing">
-                <number>10</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="label_14">
-                 <property name="font">
-                  <font>
-                   <family>Inter</family>
-                   <pointsize>10</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Hồ sơ tài khoản</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_15">
-                 <property name="font">
-                  <font>
-                   <family>Inter</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Tên tài khoản</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_16">
-                 <property name="font">
-                  <font>
-                   <family>Inter</family>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>1 danh sách của tôi</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
           <number>0</number>
          </property>
          <property name="bottomMargin">
-          <number>80</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="theloai">
+           <property name="minimumSize">
+            <size>
+             <width>1200</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1240</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Inter</family>
+             <pointsize>14</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Danh sách chờ</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="theloai_7">
            <property name="minimumSize">
             <size>
              <width>1200</width>
@@ -800,7 +671,7 @@ background-color: #fff;
             </font>
            </property>
            <property name="text">
-            <string>Bản nhạc hay nghe</string>
+            <string>Đang phát</string>
            </property>
           </widget>
          </item>
@@ -1036,16 +907,19 @@ border-radius: 10px;</string>
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_32">
-         <property name="bottomMargin">
-          <number>20</number>
-         </property>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
          <item>
-          <widget class="QLabel" name="theloai_2">
+          <widget class="QLabel" name="theloai_5">
+           <property name="minimumSize">
+            <size>
+             <width>1200</width>
+             <height>40</height>
+            </size>
+           </property>
            <property name="maximumSize">
             <size>
              <width>1240</width>
-             <height>60</height>
+             <height>40</height>
             </size>
            </property>
            <property name="font">
@@ -1057,134 +931,1158 @@ border-radius: 10px;</string>
             </font>
            </property>
            <property name="text">
-            <string>Danh sách phát của tôi</string>
+            <string>Bài tiếp theo</string>
            </property>
           </widget>
          </item>
-         <item alignment="Qt::AlignLeft">
-          <widget class="QWidget" name="cardframe_2" native="true">
-           <property name="maximumSize">
-            <size>
-             <width>1440</width>
-             <height>220</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Inter</family>
-            </font>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <item>
-             <widget class="QFrame" name="card_6">
-              <property name="minimumSize">
-               <size>
-                <width>170</width>
-                <height>200</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>170</width>
-                <height>200</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_17">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_18">
-                 <item alignment="Qt::AlignHCenter">
-                  <widget class="QLabel" name="label_17">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QWidget" name="cardframe_5" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_32">
+              <item>
+               <widget class="QFrame" name="frame_17">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_33">
+                 <item>
+                  <widget class="QLabel" name="label_14">
                    <property name="minimumSize">
                     <size>
-                     <width>100</width>
-                     <height>30</height>
+                     <width>16</width>
+                     <height>16</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>100</width>
-                     <height>100</height>
+                     <width>16</width>
+                     <height>16</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>1</pointsize>
+                     <family>Inter</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
-                    <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>resources.qrc/itunes.svg</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
+                    <string>2</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="frame_6">
+                  <widget class="QFrame" name="frame_18">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <layout class="QHBoxLayout" name="horizontalLayout_34">
                     <property name="leftMargin">
-                     <number>10</number>
+                     <number>0</number>
                     </property>
                     <property name="topMargin">
-                     <number>10</number>
+                     <number>0</number>
                     </property>
                     <property name="rightMargin">
-                     <number>10</number>
+                     <number>0</number>
                     </property>
                     <property name="bottomMargin">
-                     <number>10</number>
+                     <number>0</number>
                     </property>
                     <item>
-                     <widget class="QLabel" name="label_18">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
+                     <widget class="QLabel" name="label_15">
+                      <property name="maximumSize">
+                       <size>
+                        <width>44</width>
+                        <height>44</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(181, 181, 181);
+border-radius: 10px;</string>
                       </property>
                       <property name="text">
-                       <string>Tên bài hát</string>
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>resources.qrc/music-player.svg</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_19">
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
+                     <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <property name="spacing">
+                       <number>4</number>
                       </property>
-                      <property name="text">
-                       <string>Tên ca sĩ</string>
-                      </property>
-                     </widget>
+                      <item>
+                       <widget class="QLabel" name="label_16">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                          <pointsize>10</pointsize>
+                          <weight>75</weight>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên bài hát</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_23">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên ca sĩ</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </item>
                    </layout>
                   </widget>
                  </item>
                 </layout>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_19">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_35">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_24">
+                   <property name="text">
+                    <string>Thể loại</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_20">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_36">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_25">
+                   <property name="text">
+                    <string>Thời lượng</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cardframe_6" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_37">
+              <item>
+               <widget class="QFrame" name="frame_32">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_38">
+                 <item>
+                  <widget class="QLabel" name="label_26">
+                   <property name="minimumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Inter</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_33">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_39">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_27">
+                      <property name="maximumSize">
+                       <size>
+                        <width>44</width>
+                        <height>44</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(181, 181, 181);
+border-radius: 10px;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>resources.qrc/music-player.svg</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_7">
+                      <property name="spacing">
+                       <number>4</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_28">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                          <pointsize>10</pointsize>
+                          <weight>75</weight>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên bài hát</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_29">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên ca sĩ</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_34">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_40">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_30">
+                   <property name="text">
+                    <string>Thể loại</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_35">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_41">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_31">
+                   <property name="text">
+                    <string>Thời lượng</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cardframe_9" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_63">
+              <item>
+               <widget class="QFrame" name="frame_52">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_64">
+                 <item>
+                  <widget class="QLabel" name="label_60">
+                   <property name="minimumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Inter</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_53">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_65">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_61">
+                      <property name="maximumSize">
+                       <size>
+                        <width>44</width>
+                        <height>44</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(181, 181, 181);
+border-radius: 10px;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>resources.qrc/music-player.svg</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_11">
+                      <property name="spacing">
+                       <number>4</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_63">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                          <pointsize>10</pointsize>
+                          <weight>75</weight>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên bài hát</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_64">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên ca sĩ</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_54">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_66">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_65">
+                   <property name="text">
+                    <string>Thể loại</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_55">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_67">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_66">
+                   <property name="text">
+                    <string>Thời lượng</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cardframe_10" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_68">
+              <item>
+               <widget class="QFrame" name="frame_56">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_69">
+                 <item>
+                  <widget class="QLabel" name="label_67">
+                   <property name="minimumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Inter</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_57">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_70">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_68">
+                      <property name="maximumSize">
+                       <size>
+                        <width>44</width>
+                        <height>44</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(181, 181, 181);
+border-radius: 10px;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>resources.qrc/music-player.svg</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_12">
+                      <property name="spacing">
+                       <number>4</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_69">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                          <pointsize>10</pointsize>
+                          <weight>75</weight>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên bài hát</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_70">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên ca sĩ</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_58">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_71">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_71">
+                   <property name="text">
+                    <string>Thể loại</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_59">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_72">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_72">
+                   <property name="text">
+                    <string>Thời lượng</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cardframe_11" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1440</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Inter</family>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_73">
+              <item>
+               <widget class="QFrame" name="frame_60">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>220</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_74">
+                 <item>
+                  <widget class="QLabel" name="label_73">
+                   <property name="minimumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Inter</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_61">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_75">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_74">
+                      <property name="maximumSize">
+                       <size>
+                        <width>44</width>
+                        <height>44</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(181, 181, 181);
+border-radius: 10px;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>resources.qrc/music-player.svg</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_13">
+                      <property name="spacing">
+                       <number>4</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_75">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                          <pointsize>10</pointsize>
+                          <weight>75</weight>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên bài hát</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_76">
+                        <property name="minimumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>120</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Inter</family>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Tên ca sĩ</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_62">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_76">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_77">
+                   <property name="text">
+                    <string>Thể loại</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_63">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_77">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_78">
+                   <property name="text">
+                    <string>Thời lượng</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
