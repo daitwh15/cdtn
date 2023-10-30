@@ -48,7 +48,7 @@ border-radius:10px</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>51</y>
+       <y>60</y>
        <width>151</width>
        <height>35</height>
       </rect>
@@ -83,7 +83,7 @@ color:white</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>113</y>
+       <y>120</y>
        <width>136</width>
        <height>35</height>
       </rect>
@@ -165,7 +165,7 @@ border-radius:6px</string>
       <string notr="true">background-color:white</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QLabel" name="label_3">

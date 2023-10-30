@@ -566,6 +566,7 @@ background-color: #fff;
              <property name="bottomMargin">
               <number>0</number>
              </property>
+<<<<<<< HEAD
              <item>
               <widget class="QPushButton" name="logOutBtn">
                <property name="font">
@@ -584,6 +585,39 @@ font-style:bold</string>
                </property>
                <property name="text">
                 <string>Đăng Xuất</string>
+=======
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+              <widget class="QPushButton" name="accountbtn">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>60</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Inter</family>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>resources.qrc/user.svg</normaloff>resources.qrc/user.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+>>>>>>> 70e159d81a681915ef3ca01b24cd5cc37a19b013
                </property>
               </widget>
              </item>
@@ -609,7 +643,11 @@ font-style:bold</string>
          </property>
          <property name="maximumSize">
           <size>
+<<<<<<< HEAD
            <width>425</width>
+=======
+           <width>364</width>
+>>>>>>> 70e159d81a681915ef3ca01b24cd5cc37a19b013
            <height>200</height>
           </size>
          </property>
@@ -661,7 +699,11 @@ font-style:bold</string>
               </property>
               <property name="maximumSize">
                <size>
+<<<<<<< HEAD
                 <width>240</width>
+=======
+                <width>200</width>
+>>>>>>> 70e159d81a681915ef3ca01b24cd5cc37a19b013
                 <height>120</height>
                </size>
               </property>
@@ -703,7 +745,11 @@ font-style:bold</string>
                 </widget>
                </item>
                <item>
+<<<<<<< HEAD
                 <widget class="QLabel" name="username">
+=======
+                <widget class="QLabel" name="label_15">
+>>>>>>> 70e159d81a681915ef3ca01b24cd5cc37a19b013
                  <property name="font">
                   <font>
                    <family>Inter</family>
