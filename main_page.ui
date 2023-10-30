@@ -69,13 +69,13 @@ color:white</string>
       <string>Trang chủ</string>
      </property>
      <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/home.png</normaloff>:/icon/icon/home.png</iconset>
+      <iconset>
+       <normaloff>resources3.qrc/House.svg</normaloff>resources3.qrc/House.svg</iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>35</width>
-       <height>35</height>
+       <width>36</width>
+       <height>36</height>
       </size>
      </property>
     </widget>
@@ -105,8 +105,8 @@ color:white
       <string>Tìm kiếm</string>
      </property>
      <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/search.png</normaloff>:/icon/icon/search.png</iconset>
+      <iconset>
+       <normaloff>resources3.qrc/MagnifyingGlass.svg</normaloff>resources3.qrc/MagnifyingGlass.svg</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -128,7 +128,7 @@ color:white
       <string/>
      </property>
      <property name="icon">
-      <iconset resource="resources2.qrc">
+      <iconset>
        <normaloff>:/icon/icon/exit2.png</normaloff>:/icon/icon/exit2.png</iconset>
      </property>
      <property name="iconSize">
@@ -276,8 +276,8 @@ color:white</string>
       <string>Thư viện của bạn</string>
      </property>
      <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/playlists.png</normaloff>:/icon/icon/playlists.png</iconset>
+      <iconset>
+       <normaloff>resources3.qrc/Playlist.svg</normaloff>resources3.qrc/Playlist.svg</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -387,8 +387,6 @@ background-color:white
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="resources2.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
