@@ -6,72 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1350</width>
-    <height>802</height>
+    <width>1440</width>
+    <height>920</height>
    </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Arial Rounded MT Bold</family>
-    <pointsize>10</pointsize>
-   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">* {
-color:#000;
+    <string notr="true">*{
 border:none;
+padding: 0px;
 margin:0px;
 }
 
-#left_menu {
-background-color:rgb(52,152,219);
-}
-
-#main_page {
-background-color:white
-}
-
-#loginBtn {
-background-color:rgb(52,152,219);
-padding: 10px 20px;
-border-radius: 20px;
-color:white;
-}
-
-#loginBtn:hover {
-}
-
-#left_menu QPushButton {
-background-color:#fefeff;
-text-align: left;
-padding: 10px 7px;
-margin: 10px 0px
-}
-
-#signupBtn {
-color: rgb(105,105,105);
-}
-
-#signupBtn:hover {
-color: balck;
-}
-
-#homeBtn {
-border-top-left-radius:18px
-}
-
-#listWidget {
-background-color: rgb(66, 66, 66);
-color: rgb(255, 255, 127);
-selection-background-color: rgb(255, 255, 82);
-selection-color: rgb(66, 66, 66);
+#left_menu{
+background-color:rgb(52,152,219)
 }</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -90,360 +41,142 @@ selection-color: rgb(66, 66, 66);
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>10</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="homeBtn">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>51</y>
-       <width>151</width>
-       <height>35</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial Rounded MT Bold</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:none;
-color:white</string>
-     </property>
-     <property name="text">
-      <string>Trang chủ</string>
-     </property>
-     <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/home.png</normaloff>:/icon/icon/home.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>35</width>
-       <height>35</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="searchBtn">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>113</y>
-       <width>136</width>
-       <height>35</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial Rounded MT Bold</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:none;
-color:white
-</string>
-     </property>
-     <property name="text">
-      <string>Tìm kiếm</string>
-     </property>
-     <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/search.png</normaloff>:/icon/icon/search.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>35</width>
-       <height>35</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="exit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>61</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/exit2.png</normaloff>:/icon/icon/exit2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>40</width>
-       <height>40</height>
-      </size>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widget_2" native="true">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>10</y>
-      <width>1071</width>
-      <height>901</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgb(135,206,250);
-border-radius:6px</string>
-    </property>
-    <widget class="QStackedWidget" name="stackedWidget">
-     <property name="geometry">
-      <rect>
-       <x>9</x>
-       <y>69</y>
-       <width>1051</width>
-       <height>821</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:white</string>
-     </property>
-     <property name="currentIndex">
-      <number>1</number>
-     </property>
-     <widget class="QWidget" name="page">
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>5</y>
-         <width>1051</width>
-         <height>821</height>
-        </rect>
+    <item>
+     <widget class="QWidget" name="left_menu" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
+       <property name="leftMargin">
+        <number>0</number>
        </property>
-       <property name="text">
-        <string>Home page</string>
+       <property name="topMargin">
+        <number>0</number>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="rightMargin">
+        <number>0</number>
        </property>
-      </widget>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item alignment="Qt::AlignTop">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>MUSIC</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QWidget" name="page_2">
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1051</width>
-         <height>821</height>
-        </rect>
+    </item>
+    <item>
+     <widget class="QWidget" name="main_menu" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
+       <property name="leftMargin">
+        <number>0</number>
        </property>
-       <property name="text">
-        <string>Search page</string>
+       <property name="topMargin">
+        <number>0</number>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="rightMargin">
+        <number>0</number>
        </property>
-      </widget>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item alignment="Qt::AlignLeft">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources3.qrc/menu.svg</normaloff>resources3.qrc/menu.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="leftMargin">
+             <number>400</number>
+            </property>
+            <item alignment="Qt::AlignRight">
+             <widget class="QPushButton" name="signupBtn">
+              <property name="text">
+               <string>Sign up</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft">
+             <widget class="QPushButton" name="loginBtn">
+              <property name="text">
+               <string>Log in</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <widget class="QWidget" name="page"/>
+            <widget class="QWidget" name="page_2"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
-    </widget>
-    <widget class="QPushButton" name="pushButton_8">
-     <property name="geometry">
-      <rect>
-       <x>930</x>
-       <y>10</y>
-       <width>131</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial Rounded MT Bold</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:white;
-border-radius:4px;
-color:rgb(135,206,250);
-</string>
-     </property>
-     <property name="text">
-      <string>Đăng nhập</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widget_3" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>190</y>
-      <width>341</width>
-      <height>721</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgb(52,152,219);
-border-radius: 10px</string>
-    </property>
-    <widget class="QPushButton" name="playlistBtn">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>241</width>
-       <height>50</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial Rounded MT Bold</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:none;
-color:white</string>
-     </property>
-     <property name="text">
-      <string>Thư viện của bạn</string>
-     </property>
-     <property name="icon">
-      <iconset resource="resources2.qrc">
-       <normaloff>:/icon/icon/playlists.png</normaloff>:/icon/icon/playlists.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>40</width>
-       <height>40</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>292</x>
-       <y>20</y>
-       <width>41</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:none
-</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>:/icon/icon/plus.png</normaloff>:/icon/icon/plus.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>600</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QWidget" name="widget_5" native="true">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>311</width>
-       <height>151</height>
-      </rect>
-     </property>
-     <widget class="QPushButton" name="createPlaylistBtn">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>90</y>
-        <width>171</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Rounded MT Bold</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid white;
-border-radius: 16px;
-color:rgb(52,152,219);
-background-color:white
-</string>
-      </property>
-      <property name="text">
-       <string>Tạo danh sách phát</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>281</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Rounded MT Bold</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:white</string>
-      </property>
-      <property name="text">
-       <string>Tạo danh sách phát đầu tiên</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
