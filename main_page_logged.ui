@@ -787,7 +787,7 @@ background-color: #fff;
               </font>
              </property>
              <property name="text">
-              <string>Bài hát nghe gần đây</string>
+              <string>Nhạc Ballad</string>
              </property>
             </widget>
            </item>
@@ -1363,7 +1363,7 @@ background-color: #fff;
               </font>
              </property>
              <property name="text">
-              <string>Nhạc Việt Nam</string>
+              <string>Nhạc Rap</string>
              </property>
             </widget>
            </item>

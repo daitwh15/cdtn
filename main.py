@@ -2,7 +2,7 @@ import sys
 import re
 import typing
 from PyQt5 import QtCore, QtWidgets, uic
-from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget, QMainWindow, QWidget, QMessageBox
+from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget, QMainWindow, QWidget, QMessageBox, QTableWidget, QVBoxLayout, QTableWidgetItem
 from PyQt5.uic import loadUi
 import MySQLdb as mdb
 
@@ -12,7 +12,7 @@ class loginScreen(QMainWindow):
         super(loginScreen,self).__init__()
         uic.loadUi("login.ui",self)
         self.loginBtn.clicked.connect(self.login)
-        self.goToRegister.clicked.connect(self.register)
+        self.signupBtn.clicked.connect(self.register)
         self.forgotPsw.clicked.connect(self.forgotPassword)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
 
@@ -44,7 +44,7 @@ class registerScreen(QMainWindow):
     def __init__(self):
         super(registerScreen,self).__init__()
         uic.loadUi("signup.ui",self)
-        self.goToLogin.clicked.connect(self.login)
+        self.loginBtn.clicked.connect(self.login)
         self.signupBtn.clicked.connect(self.signup)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
 
@@ -78,10 +78,14 @@ class unLoggedMainPage(QMainWindow):
     def __init__(self):
         super(unLoggedMainPage,self).__init__()
         uic.loadUi("main_page.ui",self)
-        # self.goToLoginScreen.clicked.connect(self.goToLogin)
-    
-    # def goToLogin(self):
-    #     widget.setCurrentWidget(login)
+        self.loginBtn.clicked.connect(self.goToLogin)
+        self.signupBtn.clicked.connect(self.goToSignup)
+
+    def goToLogin(self):
+        widget.setCurrentWidget(login)
+
+    def goToSignup(self):
+        widget.setCurrentWidget(signup)
 
 # main page for logged in user
 class loggedMainPage(QMainWindow):
@@ -89,6 +93,29 @@ class loggedMainPage(QMainWindow):
         super(loggedMainPage,self).__init__() 
         uic.loadUi("main_page_logged.ui",self)
         self.accountBtn.clicked.connect(self.goToProfile)
+        # self.ten1 = self.label_3.text()
+        self.layout = QVBoxLayout()
+
+        db = mdb.connect('localhost','root','','user_db')
+        query = db.cursor()
+        query.execute("SELECT tenBH, CaSi FROM `baihat` ")
+        check = query.fetchone()
+        ten1 = self.label_3.text()
+        ten1.setText(str"tenBH: {check [0]}")
+
+        self.layout.addWidget(ten1)
+        self.setLayout(self.layout)
+
+        # self.tableWidget = QTableWidget()
+        # self.tableWidget.setRowCount(len(check))
+        # self.tableWidget.setColumnCount(1)
+
+        # for row_index, row_data in enumerate(check):
+        #     self.tableWidget.setItem(row_index, 0, QTableWidgetItem(row_data[0]) )
+        # self.layout.addWidget(self.tableWidget)
+        # self.setLayout(self.layout)
+
+
 
     def goToProfile(self):
         widget.setCurrentWidget(profile)
@@ -98,12 +125,21 @@ class profileScreen(QMainWindow):
     def __init__(self):
         super(profileScreen, self).__init__()
         uic.loadUi("profile.ui",self)
+        self.pushButton_6.clicked.connect(self.goToMC)
+        self.pushButton_4.clicked.connect(self.goToMain)
+
+    def goToMain(self):
+         widget.setCurrentWidget(mainPageLogged)
+
+    def goToMC(self):
+         widget.setCurrentWidget(mainPage)
+
         # self.pushButton_4.clicked.connect(self.goToMain)
-        self.logOutBtn.clicked.connect(self.goToLogin)
+        # self.logOutBtn.clicked.connect(self.goToLogin)
     # def goToMain(self):
     #     widget.setCurrentWidget(mainPageLogged)
-    def goToLogin(self):
-        widget.setCurrentWidget(login)
+    # def goToLogin(self):
+    #     widget.setCurrentWidget(login)
 
 # run
 app = QApplication(sys.argv)
