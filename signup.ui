@@ -15,38 +15,43 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">#background {
-background-color:rgb(52,152,219)
+    <string notr="true">*{
+color:white;
+}
+
+#background {
+background-color:black;
 }
 
 #signup_form {
-background-color:white;
+background-color:#121212;
 border-radius: 15px
 }
 
 #signup_form QLineEdit {
-background-color:rgb(242,242,242);
+background-color:#121212;
 border-radius: 4px;
 border: 1px solid gray;
 padding: 0px 10px;
 height: 55px;
+color:#A2A2A2
 }
 
 #signup_form QLineEdit:hover {
-border: 1.5px solid black
+border: 1.5px solid white
 }
 
 #signup_form QLineEdit:focus {
-border: 1.5px solid black
+border: 1.5px solid white
 }
 
 #forgotPsw {
 border:none;
-background-color:white
+background-color:#121212
 }
 
 #signupBtn {
-background-color:rgb(52,150,218);
+background-color:#1BD760;
 border-radius:5px;
 color:white;
 padding:5px;
@@ -54,9 +59,9 @@ height:40px
 }
 
 #loginBtn {
-background-color:white;
+background-color:#121212;
 border:none;
-color:rgb(52,152,219)
+color:white
 }</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -291,7 +296,7 @@ color:rgb(52,152,219)
                     <property name="font">
                      <font>
                       <family>Arial Rounded MT Bold</family>
-                      <pointsize>10</pointsize>
+                      <pointsize>13</pointsize>
                       <underline>true</underline>
                      </font>
                     </property>

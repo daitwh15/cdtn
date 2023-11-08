@@ -61,34 +61,32 @@ color:white
 border:none;
 padding: 15px 10px;
 border-radius: 20px;
-background-color: lightgray;
-color:#747474
+background-color: #2A2A2A;
+color:#757575
+}
+
+#search_input:hover {
+border: 1px solid gray
 }
 
 #search_input:focus {
-border: 1.5px solid black
+border: 2px solid white
 }
 
-#loginBtn{
-background-color:rgb(52,152,219);
+#login_btn{
+background-color:white;
 padding: 10px 20px;
 border-radius: 20px;
-color:white;
+color:#121212;
 }
 
-#loginBtn:hover {
-border:1px solid black;
-color:black;
-background-color:white;
-}
-
-#signupBtn{
+#signup_btn{
 padding: 10px;
-color: #606060;
+color: #A2A2A2;
 }
 
-#signupBtn:hover{
-color:black
+#signup_btn:hover{
+color:white
 }</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -501,22 +499,7 @@ color:black
            <height>40</height>
           </size>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <property name="spacing">
-           <number>5</number>
-          </property>
-          <property name="leftMargin">
-           <number>5</number>
-          </property>
-          <property name="topMargin">
-           <number>5</number>
-          </property>
-          <property name="rightMargin">
-           <number>5</number>
-          </property>
-          <property name="bottomMargin">
-           <number>5</number>
-          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="menu_btn">
             <property name="text">
@@ -547,7 +530,7 @@ color:black
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>200</width>
+              <width>150</width>
               <height>20</height>
              </size>
             </property>
@@ -555,6 +538,9 @@ color:black
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="rightMargin">
+             <number>30</number>
+            </property>
             <item>
              <widget class="QLineEdit" name="search_input">
               <property name="minimumSize">
@@ -603,28 +589,47 @@ color:black
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>200</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="profile_btn">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>resources3.qrc/icons8-male-user-50.png</normaloff>resources3.qrc/icons8-male-user-50.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="signup_btn">
+              <property name="font">
+               <font>
+                <family>Arial Rounded MT Bold</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Sign up</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="login_btn">
+              <property name="font">
+               <font>
+                <family>Arial Rounded MT Bold</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Log in</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>
