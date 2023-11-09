@@ -34,7 +34,7 @@ border-radius: 4px;
 border: 1px solid gray;
 padding: 0px 10px;
 height: 55px;
-color:#A2A2A2
+color:white;
 }
 
 #login_form QLineEdit:hover {

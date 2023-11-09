@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1337</width>
+    <width>1211</width>
     <height>920</height>
    </rect>
   </property>
@@ -50,11 +50,25 @@ padding:10px 30px;
 border-radius:10px
 }
 
+#icon_only_widget QPushButton:hover {
+border-radius:0px;
+background-color: rgba(236, 236, 236, 0.1);
+}
+
 #full_menu_widget QPushButton {
 border:none;
 padding:10px 30px;
 border-radius:10px;
-color:white
+color:gray
+}
+
+#full_menu_widget QPushButton:hover {
+border-radius:0px;
+background-color: rgba(236, 236, 236, 0.1);
+}
+
+#full_menu_widget QPushButton:checked {
+color:white;
 }
 
 #search_input{
@@ -62,7 +76,7 @@ border:none;
 padding: 15px 10px;
 border-radius: 20px;
 background-color: #2A2A2A;
-color:#757575
+color:white;
 }
 
 #search_input:hover {
@@ -73,20 +87,26 @@ border: 1px solid gray
 border: 2px solid white
 }
 
-#login_btn{
-background-color:white;
+#loginBtn{
+background-color:rgb(52,152,219);
 padding: 10px 20px;
 border-radius: 20px;
-color:#121212;
+color:white;
 }
 
-#signup_btn{
+#loginBtn:hover {
+border:1px solid black;
+color:black;
+background-color:white;
+}
+
+#signupBtn{
 padding: 10px;
-color: #A2A2A2;
+color: #606060;
 }
 
-#signup_btn:hover{
-color:white
+#signupBtn:hover{
+color:black
 }</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -499,188 +519,150 @@ color:white
            <height>40</height>
           </size>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
-           <widget class="QPushButton" name="menu_btn">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>resources3.qrc/icons8-menu-50.png</normaloff>resources3.qrc/icons8-menu-50.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="menu_btn">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>resources3.qrc/icons8-menu-50.png</normaloff>resources3.qrc/icons8-menu-50.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>200</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QLineEdit" name="search_input">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial Rounded MT Bold</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="placeholderText">
+                  <string>What do you want to listen to?</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="search_btn">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>resources3.qrc/icons8-search-50.png</normaloff>resources3.qrc/icons8-search-50.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>40</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>200</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="profile_btn">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>resources3.qrc/icons8-male-user-50.png</normaloff>resources3.qrc/icons8-male-user-50.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>150</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <property name="rightMargin">
-             <number>30</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="search_input">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Arial Rounded MT Bold</family>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="placeholderText">
-               <string>What do you want to listen to?</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="search_btn">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>resources3.qrc/icons8-search-50.png</normaloff>resources3.qrc/icons8-search-50.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>40</width>
-                <height>40</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>100</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QPushButton" name="signup_btn">
-              <property name="font">
-               <font>
-                <family>Arial Rounded MT Bold</family>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Sign up</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="login_btn">
-              <property name="font">
-               <font>
-                <family>Arial Rounded MT Bold</family>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Log in</string>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>40</width>
-                <height>40</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QStackedWidget" name="stackedWidget">
+               <widget class="QWidget" name="page"/>
+               <widget class="QWidget" name="page_2"/>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
          </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QStackedWidget" name="stackedWidget">
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <widget class="QWidget" name="page">
-          <layout class="QVBoxLayout" name="verticalLayout_6">
-           <item>
-            <widget class="QLabel" name="label_4">
-             <property name="text">
-              <string>Home</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="page_3">
-          <layout class="QVBoxLayout" name="verticalLayout_8">
-           <item>
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>Search</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="page_2">
-          <layout class="QVBoxLayout" name="verticalLayout_7">
-           <item>
-            <widget class="QLabel" name="label_5">
-             <property name="text">
-              <string>Libraby</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
         </widget>
        </item>
       </layout>

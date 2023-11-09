@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1337</width>
+    <width>1411</width>
     <height>920</height>
    </rect>
   </property>
@@ -32,16 +32,14 @@ color:#fff
 background-color: black;
 }
 
-#icon_only_widget{
-background-color:#121212
+#icon_only_widget, #full_menu_widget, #main_widget, #profileCont{
+background-color:#1f1f1f;
+border-radius:6px
+
 }
 
-#full_menu_widget{
-background-color:#121212
-}
-
-#main_widget {
-background-color:#121212;
+#profileCont {
+border_raidius: 10px
 }
 
 #icon_only_widget QPushButton {
@@ -50,23 +48,41 @@ padding:10px 30px;
 border-radius:10px
 }
 
+#icon_only_widget QPushButton:hover {
+border-radius:0px;
+background-color: rgba(236, 236, 236, 0.1);
+}
+
 #full_menu_widget QPushButton {
 border:none;
 padding:10px 30px;
 border-radius:10px;
-color:white
+color:gray
+}
+
+#full_menu_widget QPushButton:hover {
+border-radius:0px;
+background-color: rgba(236, 236, 236, 0.1);
+}
+
+#full_menu_widget QPushButton:checked {
+color:white;
 }
 
 #search_input{
 border:none;
 padding: 15px 10px;
 border-radius: 20px;
-background-color: lightgray;
-color:#747474
+background-color: #2A2A2A;
+color:white;
+}
+
+#search_input:hover {
+border: 1px solid gray
 }
 
 #search_input:focus {
-border: 1.5px solid black
+border: 2px solid white
 }
 
 #loginBtn{
@@ -276,23 +292,6 @@ color:black
          </property>
         </spacer>
        </item>
-       <item>
-        <widget class="QPushButton" name="exit">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>resources3.qrc/icons8-exit-50.png</normaloff>resources3.qrc/icons8-exit-50.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>
@@ -448,29 +447,6 @@ color:black
           </size>
          </property>
         </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="exit_2">
-         <property name="font">
-          <font>
-           <family>Arial Rounded MT Bold</family>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Exit</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>resources3.qrc/icons8-exit-50.png</normaloff>resources3.qrc/icons8-exit-50.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>

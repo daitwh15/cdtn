@@ -1,10 +1,17 @@
 import sys
 import re
 import typing
-from PyQt5 import QtCore, QtWidgets, uic
-from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget, QMainWindow, QWidget, QMessageBox, QTableWidget, QVBoxLayout, QTableWidgetItem
-from PyQt5.uic import loadUi
+import requests
+import os
+from PyQt5 import QtCore, QtWidgets, uic, QtNetwork, QtGui
+from PyQt5.QtGui import QPixmap
+# from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget, QMainWindow, QWidget, QMessageBox, QTableWidget, QVBoxLayout, QTableWidgetItem,QLabel
+from PyQt5.QtWidgets import *
+from PyQt5.uic import loadUi 
+from PyQt5.QtMultimedia import QAudioOutput, QMediaPlayer, QMediaContent
+from PyQt5.QtCore import QUrl,QTime
 import MySQLdb as mdb
+from io import BytesIO
 
 # log in screen
 class loginScreen(QMainWindow):
@@ -72,50 +79,145 @@ class registerScreen(QMainWindow):
         # if len(email) == 0 or len(username) == 0 or len(password) == 0:
         #     QMessageBox.information(self, "Lỗi", "Vui lòng điền đầy đủ các thông tin!")
 
-
 #  main page for unlogged in user
 class unLoggedMainPage(QMainWindow):
     def __init__(self):
         super(unLoggedMainPage,self).__init__()
-        uic.loadUi("main_page.ui",self)
-        self.loginBtn.clicked.connect(self.goToLogin)
-        self.signupBtn.clicked.connect(self.goToSignup)
+        uic.loadUi("main_page_unlogged.ui",self)
+        self.login_btn.clicked.connect(self.goToLogin)
+        self.signup_btn.clicked.connect(self.goToSignup)
+
+        self.icon_only_widget.hide()
+        self.home_btn_2.setChecked(True)
+        self.stacked_widget.setCurrentIndex(0)
+        self.home_btn.clicked.connect(self.showHome)
+        self.home_btn_2.clicked.connect(self.showHome)
+        self.library_btn.clicked.connect(self.showLibrary)
+        self.library_btn_2.clicked.connect(self.showLibrary)
+        
+        self.text.setText('Chung an cut')
+        self.listWidget.addItem('The Anh')
+        self.listWidget.addItem('Chung')
+
+
+    def showHome(self):
+        self.stacked_widget.setCurrentIndex(0)
+
+    def showLibrary(self):
+        self.stacked_widget.setCurrentIndex(1) 
 
     def goToLogin(self):
         widget.setCurrentWidget(login)
 
     def goToSignup(self):
         widget.setCurrentWidget(signup)
-
 # main page for logged in user
 class loggedMainPage(QMainWindow):
     def __init__(self):
         super(loggedMainPage,self).__init__() 
         uic.loadUi("main_page_logged.ui",self)
         self.accountBtn.clicked.connect(self.goToProfile)
-        # self.ten1 = self.label_3.text()
-        # self.layout = QVBoxLayout()
 
-        # db = mdb.connect('localhost','root','','BaiHat')
-        # query = db.cursor()
-        # query.execute("SELECT tenBH, caSi FROM `BaiHat` ")
-        # check = query.fetchone()
-        # ten1 = self.label_3.text()
-        # ten1.setText(f"tenBH: {check[0]}")
+
+        # Show data-----------------
+
+        self.layout = QVBoxLayout()
+
+        db = mdb.connect('localhost','root','','user_db')
+        query = db.cursor()
+        query.execute("SELECT * FROM `baihat`")
+        check = query.fetchall()
+
+        self.tableWidget1.setRowCount(len(check)) ##set number of rows
+        self.tableWidget1.setColumnCount(6)
+
+        row = 0
+        while True:
+            sqlRow = query.fetchone()
+            if sqlRow == None:
+                break ##stops while loop if there is no more lines in sql table
+            for col in range(0, 6): ##otherwise add row into tableWidget
+                self.tableWidget1.setItem(row, col, QtGui.QTableWidgetItem(sqlRow[col]))
+            row += 1
+        
+        # ten1 = QLabel()
+        # ten1 = self.label_3.setText(f"{check[1]}")
+        # casi = self.label_4.setText(f"{check[2]}")
+        # my_string = check[4]
+        # new_string = my_string[:-2]
+        # print(new_string)
+        
+        # response = requests.get(new_string)
+        # print(response)
+        # image_data = BytesIO(response.content)
+        # pixmap = QPixmap()
+        # pixmap.loadFromData(image_data.getvalue())
+
+        # image_label = self.label_2.setPixmap(pixmap)
+        
+        # self.layout.addWidget(image_label)
+
+        # response = requests.get(new_string)
+        # print(response)
+        # image_data = BytesIO(response.content)
+        # pixmap = QPixmap()
+        # pixmap.loadFromData(image_data.getvalue())
+
+        # image_label = self.label_2.setPixmap(pixmap)
+        
+        # self.layout.addWidget(image_label)
+        
+       
 
         # self.layout.addWidget(ten1)
+        # self.layout.addWidget(casi)
+        # # self.layout.addWidget(anh)
         # self.setLayout(self.layout)
 
-        # self.tableWidget = QTableWidget()
-        # self.tableWidget.setRowCount(len(check))
-        # self.tableWidget.setColumnCount(1)
+       
+       #Play Music--------------------
+        # self.toolButtonPlay.setEnabled(False) 
+        
+        self.player = QMediaPlayer()
+        # self.audio = QAudioOutput()
 
-        # for row_index, row_data in enumerate(check):
-        #     self.tableWidget.setItem(row_index, 0, QTableWidgetItem(row_data[0]) )
-        # self.layout.addWidget(self.tableWidget)
-        # self.setLayout(self.layout)
+        # self.player.setAudioOutput(self.audio)
 
+        # self.actionOpen_Music.triggered.connect(self.open_music)
+        self.toolButtonPlay.clicked.connect(self.play_music)
 
+        # self.player.positionChanged.connect(self.position_changed)
+        # self.player.durationChanged.connect(self.duration_changed)
+
+    # def open_music(self):
+    #     # fileName= QFileDialog.getOpenFileName(self, "Open Music")
+    #     fileName = "C:/Users/ADMIN/Downloads/TroiGiauTroiMangDi"
+    #     if fileName != '' :
+    #         self.player.setSource(QUrl.fromLocalFile(fileName))
+    #         self.toolButtonPlay.setEnabled(True)
+
+    def play_music(self):
+        file = os.path.join(os.getcwd(), 'C:/Users/ADMIN/Downloads/TroiGiauTroiMangDi.mp3')
+        url = QUrl.fromLocalFile(file)
+        content = QMediaContent(url)
+        self.player.setMedia(content)
+        self.player.play()
+
+    # def position_changed(self, position):
+    #     if(self.horizontalSliderPlay.maximum() != self.player.duration()):
+    #         self.horizontalSliderPlay.setMaximum(self.player.duration())
+
+    #     self.horizontalSliderPlay.setValue(position)
+
+    #     seconds = (position / 1000) % 60
+    #     minutes = (position / 60000) % 60
+    #     hours = (position / 2600000) % 24
+
+    #     time = QTime(hours, minutes, seconds)
+    #     self.labelTimer.setText(time.toString())
+
+    # def duration_changed(self, duration):
+    #     self.horizontalSliderPlay.setRange(0, duration)
 
     def goToProfile(self):
         widget.setCurrentWidget(profile)

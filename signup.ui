@@ -17,6 +17,7 @@
    <property name="styleSheet">
     <string notr="true">*{
 color:white;
+font-family:&quot;Arial Rounded MT Bold&quot;
 }
 
 #background {
@@ -34,7 +35,7 @@ border-radius: 4px;
 border: 1px solid gray;
 padding: 0px 10px;
 height: 55px;
-color:#A2A2A2
+color:white;
 }
 
 #signup_form QLineEdit:hover {
@@ -217,7 +218,7 @@ color:white
            <widget class="QWidget" name="signup_button_field" native="true">
             <property name="font">
              <font>
-              <family>Papyrus</family>
+              <family>Arial Rounded MT Bold</family>
              </font>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_6">
