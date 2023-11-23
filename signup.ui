@@ -211,6 +211,19 @@ color:white
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QLineEdit" name="password_again">
+               <property name="font">
+                <font>
+                 <family>Arial Rounded MT Bold</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="placeholderText">
+                <string>Confirm password</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>

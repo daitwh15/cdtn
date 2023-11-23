@@ -80,13 +80,6 @@ border: 1px solid gray
 border: 2px solid white
 }
 
-#login_btn{
-background-color:white;
-padding: 10px 20px;
-border-radius: 20px;
-color:#121212;
-}
-
 #signup_btn{
 padding: 10px;
 color: #A2A2A2;
@@ -583,7 +576,7 @@ font: 10pt &quot;Arial Rounded MT Bold&quot;;
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
-             <widget class="QPushButton" name="signup_btn">
+             <widget class="QPushButton" name="account_btn">
               <property name="font">
                <font>
                 <family>Arial Rounded MT Bold</family>
@@ -591,20 +584,11 @@ font: 10pt &quot;Arial Rounded MT Bold&quot;;
                </font>
               </property>
               <property name="text">
-               <string>Sign up</string>
+               <string/>
               </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="login_btn">
-              <property name="font">
-               <font>
-                <family>Arial Rounded MT Bold</family>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Log in</string>
+              <property name="icon">
+               <iconset>
+                <normaloff>resources3.qrc/icons8-male-user-50.png</normaloff>resources3.qrc/icons8-male-user-50.png</iconset>
               </property>
               <property name="iconSize">
                <size>

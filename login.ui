@@ -173,7 +173,7 @@ color:white
               <number>0</number>
              </property>
              <item>
-              <widget class="QLineEdit" name="username">
+              <widget class="QLineEdit" name="logon">
                <property name="font">
                 <font>
                  <family>Arial Rounded MT Bold</family>
