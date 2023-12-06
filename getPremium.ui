@@ -82,6 +82,13 @@
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QLineEdit" name="full_name"/>
          </item>
         </layout>

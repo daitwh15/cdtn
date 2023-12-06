@@ -21,7 +21,6 @@ class Ui_PremRegWindow(object):
         
     def receive_id(get_id):
         Ui_PremRegWindow.id = get_id
-        print(f"ID: {Ui_PremRegWindow.id}")
         
     def quickPremReg(self):
         user_fullname = self.full_name.text()

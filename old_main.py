@@ -258,26 +258,31 @@ class unLoggedMainPage(QMainWindow):
 
     def showHome(self):
         db = mdb.connect('localhost','root','','user_db')
-        get_songs = db.cursor()
-        get_songs.execute("SELECT `TenBH` FROM `baihat`")
+        
+        # get_songs = db.cursor()
+        # get_songs.execute("SELECT `TenBH` FROM `baihat`")
+        
         get_link = db.cursor()
         get_link.execute("SELECT `Link` FROM `baihat`")
+        
         link = get_link.fetchall()
-        result = get_songs.fetchall()
+        # result = get_songs.fetchall()
+        
         # Chuyển danh sách các kết quả thành danh sách tên bài hát
-        song_names = [row[0] for row in result]
+        # song_names = [row[0] for row in result]
+        
         song_link = [row[0] for row in link]
         # Chuyển danh sách tên bài hát thành chuỗi
         unique_items = []
 
-        for item in song_names:
-            if item not in unique_items:
-                unique_items.append(item)
-        print(unique_items)
+        # for item in song_names:
+        #     if item not in unique_items:
+        #         unique_items.append(item)
+        # print(unique_items)
         self.listWidget.clear()
         #self.current_songs.clear()
-        for song_name in unique_items:
-            self.listWidget.addItem(song_name)
+        # for song_name in unique_items:
+            # self.listWidget.addItem(song_name)
         for link_value in song_link:
             self.current_songs.append(link_value)
         

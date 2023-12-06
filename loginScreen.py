@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from homeScreen1 import Ui_HomeWindow
 from getPremium import Ui_PremRegWindow
+from profileScreen import Ui_ProfileWindow
 from PyQt5.QtWidgets import *
 import MySQLdb as mdb
 
@@ -54,7 +55,7 @@ class Ui_LoginWindow(object):
             
             try:
                 # get_username = username
-                # sendNameToProfile= Ui_MainWindow
+                # sendNameToProfile= Ui_ProfileWindow
                 # sendNameToProfile.receive_username(get_username)
                 
                 sendIdToPremReg = Ui_PremRegWindow

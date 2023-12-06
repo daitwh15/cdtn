@@ -22,15 +22,18 @@ class Ui_HomeWindow(object):
     def load_song(self):
         self.free_song_list.clear()
         db = mdb.connect('localhost','root','','music_app_db')
-        get_free_song = db.cursor()
-        get_free_song.execute("SELECT `name` FROM `song_management`")
-        free_songs = get_free_song.fetchall()
-        free_song = [row[0] for row in free_songs]
         
-        for fsong in free_song:
-            if fsong not in songs.free_songs_list:
-                songs.free_songs_list.append(fsong)
-        for item in songs.free_songs_list:
+        songs_name = db.cursor()
+        songs_name.execute("SELECT `name` FROM `song_management`")
+        
+        query_name = songs_name.fetchall()
+        names = [row[0] for row in query_name]
+        
+        for song in names:
+            if song not in self.songs_name_list:
+                self.songs_name_list.append(song)
+        
+        for item in self.songs_name_list:
             self.free_song_list.addItem(
                 QListWidgetItem(
                     QIcon('resources3.qrc/music_icon.png'),
@@ -52,10 +55,6 @@ class Ui_HomeWindow(object):
                  
     def show_btn(self):
         self.music_btn.show()
-        
-    def play_ads(self):
-        self.player.setMedia("ads/bugger.mp3")
-        self.player.play()
 
     def play_song(self):
         try:
@@ -63,7 +62,7 @@ class Ui_HomeWindow(object):
             stopped = False
 
             current_free_selection = self.free_song_list.currentRow()
-            current_free_song = songs.current_songs_list[current_free_selection]
+            current_free_song = self.current_songs[current_free_selection]
             
             free_song_url = QMediaContent(QUrl.fromLocalFile(current_free_song))
             
@@ -71,7 +70,7 @@ class Ui_HomeWindow(object):
             self.player.play()
             self.move_slider()
         except Exception as e:
-            print(f"Play song error: {e}")
+            print(f"Play song error: {e}")   
 
     def move_slider(self):
         if stopped:
@@ -108,12 +107,12 @@ class Ui_HomeWindow(object):
         try:
             current_media = self.player.media()
             current_song_url = current_media.canonicalUrl().path()[1:]
-            current_song_index = songs.current_songs_list.index(current_song_url)
-            if current_song_index + 1 == len(songs.current_songs_list):
+            current_song_index = self.current_songs.index(current_song_url)
+            if current_song_index + 1 == len(self.current_songs):
                 next_index = 0
             else:
                 next_index = current_song_index + 1
-            current_song = songs.current_songs_list[next_index]
+            current_song = self.current_songs[next_index]
             self.free_song_list.setCurrentRow(next_index) 
 
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
@@ -128,8 +127,8 @@ class Ui_HomeWindow(object):
         try:
             current_media = self.player.media()
             current_song_url = current_media.canonicalUrl().path()[1:]
-            current_song_index = songs.current_songs_list.index(current_song_url)
-            current_song = songs.current_songs_list[current_song_index]
+            current_song_index = self.current_songs.index(current_song_url)
+            current_song = self.current_songs[current_song_index]
             self.free_song_list.setCurrentRow(current_song_index)     
 
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
@@ -142,8 +141,8 @@ class Ui_HomeWindow(object):
 
     def shuffle_next(self):
         try:
-            song_index = random.randint(0, len(songs.current_songs_list))
-            current_song = songs.current_songs_list[song_index]
+            song_index = random.randint(0, len(self.current_songs))
+            current_song = self.current_songs[song_index]
             self.free_song_list.setCurrentRow(song_index)     
 
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
@@ -196,13 +195,13 @@ class Ui_HomeWindow(object):
         try:
             current_media = self.player.media()
             current_song_url = current_media.canonicalUrl().path()[1:]
-            current_song_index = songs.current_song_list.index(current_song_url)
+            current_song_index = self.current_songs.index(current_song_url)
             if current_song_index == 0:
-                previous_index = len(songs.current_song_list) - 1
+                previous_index = len(self.current_songs) - 1
             else:
                 previous_index = current_song_index - 1
-            current_song = songs.current_song_list[previous_index]
-            self.loaded_songs_listWidget.setCurrentRow(previous_index)
+            current_song = self.current_songs[previous_index]
+            self.free_song_list.setCurrentRow(previous_index)
 
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
             self.player.setMedia(song_url)
@@ -878,6 +877,7 @@ class Ui_HomeWindow(object):
         self.library_btn_2.clicked.connect(self.showPlaylist)
         
         self.account_btn.clicked.connect(self.showProfile)
+        self.add_music_btn.hide()
             
         self.explore_prem.clicked.connect(self.get_premium)
         self.explore_prem.clicked.connect(MainWindow.close)
@@ -898,6 +898,9 @@ class Ui_HomeWindow(object):
         looped = False
         is_shuffled = False
         
+        self.songs_name_list = []
+        self.current_songs = []
+        
         self.player = QMediaPlayer()
         self.current_volume = 50
         self.player.setVolume(self.current_volume)
@@ -911,7 +914,7 @@ class Ui_HomeWindow(object):
         # self.music_btn.hide()
         self.free_song_list.currentItemChanged.connect(self.show_btn)
         
-        self.play_btn.clicked.connect(self.play_ads)
+        self.play_btn.clicked.connect(self.play_song)
         self.pause_btn.clicked.connect(self.pause_and_unpause)
         self.stop_btn.clicked.connect(self.stop_song)
         self.next_btn.clicked.connect(self.next_song)

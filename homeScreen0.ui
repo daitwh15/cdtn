@@ -702,7 +702,7 @@ margin:10px
        <item>
         <widget class="QStackedWidget" name="stacked_widget">
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="home_widget">
           <layout class="QVBoxLayout" name="verticalLayout_6">
