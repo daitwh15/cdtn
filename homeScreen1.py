@@ -24,20 +24,33 @@ class Ui_HomeWindow(object):
         db = mdb.connect('localhost','root','','music_app_db')
         
         songs_name = db.cursor()
-        songs_name.execute("SELECT `name` FROM `song_management`")
+        songs_name.execute("SELECT song_management.name, artist_management.artist_name FROM `song_management` Join `artist_management` ON song_management.artist_id = artist_management.artist_id")
         
         query_name = songs_name.fetchall()
-        names = [row[0] for row in query_name]
+        names = [(row[0], row[1]) for row in query_name]
         
         for song in names:
             if song not in self.songs_name_list:
-                self.songs_name_list.append(song)
+                self.songs_name_list.append(str(song))
         
-        for item in self.songs_name_list:
-            self.free_song_list.addItem(
-                QListWidgetItem(
-                    QIcon('resources3.qrc/music_icon.png'),
-                    item))
+        for song_tuple_str in self.songs_name_list:
+            song_tuple = eval(song_tuple_str)
+            
+            song_name = song_tuple[0]
+            artist_name = song_tuple[1]
+            item = QListWidgetItem(f"{song_name} - {artist_name}")
+            item_text = f"{song_name} - {artist_name}"
+            item = QListWidgetItem(QIcon('resources3.qrc/music_icon.png'), item_text)
+            self.free_song_list.addItem(item)
+        
+        songs_link = db.cursor()
+        songs_link.execute("SELECT `link` FROM `song_management`")
+        
+        query_link = songs_link.fetchall()
+        links = [row[0] for row in query_link]
+        
+        for link_value in links:
+            self.current_songs.append(link_value)
         
     def add_songs(self):
         files, _ = QFileDialog.getOpenFileNames(
@@ -61,12 +74,11 @@ class Ui_HomeWindow(object):
             global stopped
             stopped = False
 
-            current_free_selection = self.free_song_list.currentRow()
-            current_free_song = self.current_songs[current_free_selection]
-            
-            free_song_url = QMediaContent(QUrl.fromLocalFile(current_free_song))
-            
-            self.player.setMedia(free_song_url)
+            current_selection = self.free_song_list.currentRow()
+            current_song = self.current_songs[current_selection]
+
+            song_url = QMediaContent(QUrl.fromLocalFile(current_song))
+            self.player.setMedia(song_url)
             self.player.play()
             self.move_slider()
         except Exception as e:
@@ -123,43 +135,52 @@ class Ui_HomeWindow(object):
         except Exception as e:
             print(f"Play song error: {e}")
 
-    def looped_next(self):
-        try:
-            current_media = self.player.media()
-            current_song_url = current_media.canonicalUrl().path()[1:]
-            current_song_index = self.current_songs.index(current_song_url)
-            current_song = self.current_songs[current_song_index]
-            self.free_song_list.setCurrentRow(current_song_index)     
+    # def looped_next(self):
+    #     try:
+    #         current_media = self.player.media()
+    #         current_song_url = current_media.canonicalUrl().path()[1:]
+    #         current_song_index = self.current_songs.index(current_song_url)
+    #         current_song = self.current_songs[current_song_index]
+    #         self.free_song_list.setCurrentRow(current_song_index)     
 
-            song_url = QMediaContent(QUrl.fromLocalFile(current_song))
-            self.player.setMedia(song_url)
-            self.player.play()
-            self.move_slider()
+    #         song_url = QMediaContent(QUrl.fromLocalFile(current_song))
+    #         self.player.setMedia(song_url)
+    #         self.player.play()
+    #         self.move_slider()
 
-        except Exception as e:
-            print(f"Looped song error: {e}")
+    #     except Exception as e:
+    #         print(f"Looped song error: {e}")
 
-    def shuffle_next(self):
-        try:
-            song_index = random.randint(0, len(self.current_songs))
-            current_song = self.current_songs[song_index]
-            self.free_song_list.setCurrentRow(song_index)     
+    # def shuffle_next(self):
+    #     try:
+    #         song_index = random.randint(0, len(self.current_songs))
+    #         current_song = self.current_songs[song_index]
+    #         self.free_song_list.setCurrentRow(song_index)     
 
-            song_url = QMediaContent(QUrl.fromLocalFile(current_song))
-            self.player.setMedia(song_url)
-            self.player.play()
-            self.move_slider()
+    #         song_url = QMediaContent(QUrl.fromLocalFile(current_song))
+    #         self.player.setMedia(song_url)
+    #         self.player.play()
+    #         self.move_slider()
 
-        except Exception as e:
-            print(f"Shuffled song error: {e}")
+    #     except Exception as e:
+    #         print(f"Shuffled song error: {e}")
 
     def next_song(self):
-        if is_shuffled:
-            self.shuffle_next()
-        elif looped:
-            self.looped_next()
-        else:
-            self.default_next()
+        try:
+            current_selection = self.free_song_list.currentRow()
+
+            if current_selection + 1 == len(self.current_songs):
+                next_index = 0
+            else:
+                next_index = current_selection + 1
+            current_song = self.current_songs[next_index]
+            self.free_song_list.setCurrentRow(next_index)
+            song_url = QMediaContent(QUrl.fromLocalFile(current_song))
+            self.player.setMedia(song_url)
+            self.player.play()
+            self.move_slider()
+        except Exception as e:
+            print(f"Next song error: {e}")
 
     def loop_one_song(self):
         try:
@@ -236,7 +257,8 @@ class Ui_HomeWindow(object):
         self.home_btn.setChecked(False)
         self.pushButton_3.setChecked(True)
         self.pushButton_4.setChecked(True)
-        self.stacked_widget.setCurrentIndex(3)            
+        self.stacked_widget.setCurrentIndex(3)  
+                  
     def showSearch(self):
         self.home_btn.setChecked(False)
         self.search_btn.setChecked(True)
@@ -877,6 +899,7 @@ class Ui_HomeWindow(object):
         self.library_btn_2.clicked.connect(self.showPlaylist)
         
         self.account_btn.clicked.connect(self.showProfile)
+        
         self.add_music_btn.hide()
             
         self.explore_prem.clicked.connect(self.get_premium)
@@ -911,7 +934,7 @@ class Ui_HomeWindow(object):
         # self.volume_slider.sliderMoved[int].connect(lambda: self.volume_changed())
         self.music_slider.sliderMoved[int].connect(lambda: self.player.setPosition(self.music_slider.value()))
         
-        # self.music_btn.hide()
+        self.music_btn.hide()
         self.free_song_list.currentItemChanged.connect(self.show_btn)
         
         self.play_btn.clicked.connect(self.play_song)

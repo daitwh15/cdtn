@@ -39,13 +39,11 @@ class Ui_MainWindow(object):
         songs_name.execute("SELECT song_management.name, artist_management.artist_name FROM `song_management` Join `artist_management` ON song_management.artist_id = artist_management.artist_id")
         
         query_name = songs_name.fetchall()
-        print(query_name)
         names = [(row[0], row[1]) for row in query_name]
         
         for song in names:
             if song not in self.songs_name_list:
                 self.songs_name_list.append(str(song))
-        print(self.songs_name_list)
         
         for song_tuple_str in self.songs_name_list:
             song_tuple = eval(song_tuple_str)
@@ -92,25 +90,23 @@ class Ui_MainWindow(object):
 
             current_selection = self.free_song_list.currentRow()
             current_song = self.current_songs[current_selection]
-            print("Song: ", current_selection)
-            print("Current played: ", current_song)
 
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
             self.player.setMedia(song_url)
             self.player.play()
-            # self.move_slider()
+            self.move_slider()
         except Exception as e:
             print(f"Play song error: {e}")
             
-    # def play_ads(self):
-    #     music_path = 'ads/bugger.mp3'
-    #     media_content = QMediaContent(QUrl.fromLocalFile(music_path))
-    #     self.player.setMedia(media_content)
-    #     self.player.play()
+    def play_ads(self):
+        music_path = 'ads/bugger.mp3'
+        media_content = QMediaContent(QUrl.fromLocalFile(music_path))
+        self.player.setMedia(media_content)
+        self.player.play()
         
-    # def song_end(self, status):
-    #     if status == QMediaPlayer.EndOfMedia:
-    #         self.play_ads()
+    def song_end(self, status):
+        if status == QMediaPlayer.EndOfMedia:
+            self.play_ads()
 
     def move_slider(self):
         if stopped:
@@ -147,12 +143,12 @@ class Ui_MainWindow(object):
         try:
             current_media = self.player.media()
             current_song_url = current_media.canonicalUrl().path()[1:]
-            current_song_index = songs.current_songs_list.index(current_song_url)
-            if current_song_index + 1 == len(songs.current_songs_list):
+            current_song_index = self.current_songs.index(current_song_url)
+            if current_song_index + 1 == len(self.current_songs):
                 next_index = 0
             else:
                 next_index = current_song_index + 1
-            current_song = songs.current_songs_list[next_index]
+            current_song = self.current_songs[next_index]
             self.free_song_list.setCurrentRow(next_index) 
 
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
@@ -167,8 +163,8 @@ class Ui_MainWindow(object):
     #     try:
     #         current_media = self.player.media()
     #         current_song_url = current_media.canonicalUrl().path()[1:]
-    #         current_song_index = songs.current_songs_list.index(current_song_url)
-    #         current_song = songs.current_songs_list[current_song_index]
+    #         current_song_index = self.current_songs.index(current_song_url)
+    #         current_song = self.current_songs[current_song_index]
     #         self.free_song_list.setCurrentRow(current_song_index)     
 
     #         song_url = QMediaContent(QUrl.fromLocalFile(current_song))
@@ -181,8 +177,8 @@ class Ui_MainWindow(object):
 
     # def shuffle_next(self):
     #     try:
-    #         song_index = random.randint(0, len(songs.current_songs_list))
-    #         current_song = songs.current_songs_list[song_index]
+    #         song_index = random.randint(0, len(self.current_songs))
+    #         current_song = self.current_songs[song_index]
     #         self.free_song_list.setCurrentRow(song_index)     
 
     #         song_url = QMediaContent(QUrl.fromLocalFile(current_song))
@@ -194,14 +190,6 @@ class Ui_MainWindow(object):
     #         print(f"Shuffled song error: {e}")
 
     def next_song(self):
-        # global looped
-        # global is_shuffled
-        # if is_shuffled:
-        #     self.shuffle_next()
-        # elif looped:
-        #     self.looped_next()
-        # else:
-        #     self.default_next()
         try:
             current_selection = self.free_song_list.currentRow()
 
@@ -250,22 +238,21 @@ class Ui_MainWindow(object):
 
     def previous_song(self):
         try:
-            current_media = self.player.media()
-            current_song_url = current_media.canonicalUrl().path()[1:]
-            current_song_index = songs.current_songs_list.index(current_song_url)
-            if current_song_index == 0:
-                previous_index = len(songs.current_songs_list) - 1
-            else:
-                previous_index = current_song_index - 1
-            current_song = songs.current_songs_list[previous_index]
-            self.free_song_list.setCurrentRow(previous_index)
+            current_selection = self.free_song_list.currentRow()
 
+            if current_selection == 0:
+                previous_index = len(self.current_songs) - 1
+            else:
+                previous_index = current_selection - 1
+
+            current_song = self.current_songs[previous_index]
+            self.free_song_list.setCurrentRow(previous_index)
             song_url = QMediaContent(QUrl.fromLocalFile(current_song))
             self.player.setMedia(song_url)
             self.player.play()
             self.move_slider()
         except Exception as e:
-            print(f"Default next error: {e}")
+            print(f"Previous song error: {e}")
 
     def volume_changed(self):
         try:
@@ -314,7 +301,7 @@ class Ui_MainWindow(object):
             for song_name in songs.search_song_list:
                 self.search_list.addItem(
                     QListWidgetItem(
-                    QIcon('C:/Users/ADMIN/Desktop/vtChung/NamCuoi_Ki1/CĐTN_Du_An_Cong_Nghe_Khoa_Hoc/Python-Website-Development-2/resources3.qrc/music_icon.png'),
+                    QIcon('resources3.qrc/music_icon.png'),
                     song_name))
                 
     def setupUi(self, MainWindow):
@@ -918,7 +905,7 @@ class Ui_MainWindow(object):
         self.songs_name_list = []
         self.current_songs = []
         
-        self.current_volume = 0
+        self.current_volume = 50
         self.player = QMediaPlayer()
         self.player.setVolume(self.current_volume)
         

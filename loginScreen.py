@@ -33,7 +33,7 @@ class Ui_LoginWindow(object):
         except ImportError:
             pass
 
-    def login(self, arg1):
+    def login(self):
         username = self.logon.text()
         password = self.password.text()
         
@@ -55,7 +55,7 @@ class Ui_LoginWindow(object):
             
             try:
                 # get_username = username
-                # sendNameToProfile= Ui_ProfileWindow
+                # sendNameToProfile= Ui_ProfileWindows
                 # sendNameToProfile.receive_username(get_username)
                 
                 sendIdToPremReg = Ui_PremRegWindow
